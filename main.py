@@ -34,3 +34,11 @@ desc_list = []
 for i in desc:
     description = i.text
     desc_list.append(description)
+
+# Number of reviews of products
+reviews = soup.find_all("p",class_ = "review-count")
+reviews_list = []
+
+for i in reviews:
+    review = i.text
+    reviews_list.append(review)
