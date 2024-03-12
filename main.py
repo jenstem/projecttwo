@@ -18,3 +18,11 @@ product_name = []
 for i in names:
     name = i.text
     product_name.append(name)
+
+# Prices of products
+prices = soup.find_all("h4",class_ = "pull-right")
+prices_list = []
+
+for i in prices:
+    price = i.text
+    prices_list.append(price)
