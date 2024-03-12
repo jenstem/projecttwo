@@ -26,3 +26,11 @@ prices_list = []
 for i in prices:
     price = i.text
     prices_list.append(price)
+
+# Description of products
+desc = soup.find_all("p",class_ = "description")
+desc_list = []
+
+for i in desc:
+    description = i.text
+    desc_list.append(description)
