@@ -42,3 +42,6 @@ reviews_list = []
 for i in reviews:
     review = i.text
     reviews_list.append(review)
+
+df = pd.DataFrame({"Product Name":product_name, "Price":prices_list, "Description":desc_list, "Reviews":reviews_list})
+df.to_csv("product_details.csv")
