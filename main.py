@@ -9,3 +9,12 @@ r = requests.get(url)
 # print(r)
 
 soup = BeautifulSoup(r.text, "html.parser")
+
+# Names of products
+names = soup.find_all("a",class_ = "title")
+print(names)
+product_name = []
+
+for i in names:
+    name = i.text
+    product_name.append(name)
